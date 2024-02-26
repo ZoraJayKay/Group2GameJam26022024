@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class SlimeCollider : MonoBehaviour
 {
-    public GameObject leftPlayer;
-    public GameObject rightPlayer;
-    public Collider leftPlayerCollider;
-    public Collider rightPlayerCollider;
+    GameObject leftPlayer;
+    GameObject rightPlayer;
+    Collider leftPlayerCollider;
+    Collider rightPlayerCollider;
 
     // Start is called before the first frame update
     void Start()
@@ -33,12 +33,13 @@ public class SlimeCollider : MonoBehaviour
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
             Debug.Log("Collision detected by name.");
+            //Destroy(this.gameObject);
         }
 
         if (other == leftPlayerCollider || other == rightPlayerCollider)
         {
             //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Collision detected from player collider");
+            Debug.Log("Collision detected from player collider by trigger");
         }
 
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
@@ -49,28 +50,28 @@ public class SlimeCollider : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        //Check for a match with the specified name on any GameObject that collides with your GameObject
-        if (collision.gameObject.name == "LeftCapsule")
-        {
-            //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Collision detected by name.");
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    //Check for a match with the specified name on any GameObject that collides with your GameObject
+    //    if (collision.gameObject.name == "LeftCapsule")
+    //    {
+    //        //If the GameObject's name matches the one you suggest, output this message in the console
+    //        Debug.Log("Collision detected by name.");
 
             
-        }
+    //    }
 
-        if (collision.collider == leftPlayerCollider || collision.collider == rightPlayerCollider)
-        {
-            //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Collision detected from player collider");
-        }
+    //    if (collision.collider == leftPlayerCollider || collision.collider == rightPlayerCollider)
+    //    {
+    //        //If the GameObject's name matches the one you suggest, output this message in the console
+    //        Debug.Log("Collision detected from player collider");
+    //    }
 
-        //Check for a match with the specific tag on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "LeftPlayer")
-        {
-            //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Collision detected by tag.");
-        }
-    }
+    //    //Check for a match with the specific tag on any GameObject that collides with your GameObject
+    //    if (collision.gameObject.tag == "LeftPlayer")
+    //    {
+    //        //If the GameObject has the same tag as specified, output this message in the console
+    //        Debug.Log("Collision detected by tag.");
+    //    }
+    //}
 }

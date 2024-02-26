@@ -30,4 +30,9 @@ public class GameManager : MonoBehaviour
 
         currentObject.gameObject.transform.Rotate(Vector3.back);
     }
+
+    public GameObject ReturnCurrentPlayer()
+    {
+        return currentObject;
+    }
 }

@@ -58,12 +58,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\SlimeSpawner.cs" />
     <Compile Include="Assets\Scripts\SpawnManagerScriptableObject.cs" />
-    <Compile Include="Assets\Scripts\SlimeScriptableObject.cs" />
-    <Compile Include="Assets\Scripts\DummySpawner.cs" />
+    <Compile Include="Assets\Scripts\SlimeSpawner.cs" />
     <Compile Include="Assets\Scripts\SlimeMover.cs" />
+    <Compile Include="Assets\Scripts\DummySpawner.cs" />
+    <Compile Include="Assets\Scripts\SlimeWaveScriptableObject.cs" />
     <Compile Include="Assets\Scripts\SlimeCollider.cs" />
+    <Compile Include="Assets\Scripts\SlimeScriptableObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
